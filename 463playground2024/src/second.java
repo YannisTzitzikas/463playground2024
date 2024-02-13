@@ -6,12 +6,12 @@
  * @author Yannis Tzitzikas (yannistzitzik@gmail.com)
  *
  */
-public class Todelete {
+public class second {
 
 	/**
 	 * 
 	 */
-	public Todelete() {
+	public second() {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -19,7 +19,7 @@ public class Todelete {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println("tsav");
+		System.out.println("lala");
 
 	}
 

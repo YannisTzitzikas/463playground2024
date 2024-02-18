@@ -155,12 +155,12 @@ public class PlotExamples {
 	static void exampleGoodConfigurable() {
 		
 	
-		// data to be visualized as two lists of X,Y values
-		// dataset1
+		// Data to be visualized as two lists of X,Y values
+		// dataset1:
 		List<Double> myDataX =  Arrays.asList(1.0,2.0,3.0,4.0,5.5,7.1);
 		List<Double> myDataY =  Arrays.asList(3.0,4.0,1.0,2.0,6.0,0.2);
 		
-		//dataset2
+		//dataset2:
 		List<Double> myDataBX =  Arrays.asList(0.5,2.3,3.0,4.5,5.5,6.1);
 		List<Double> myDataBY =  Arrays.asList(5.0,4.0,2.0,2.0,1.0,4.2);
 			

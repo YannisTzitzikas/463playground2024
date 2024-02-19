@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 /**
- * A few simple methods for tokenization 
+ * A few simple methods for tokenization (words and phrases)
  * @author Yannis Tzitzikas (yannistzitzik@gmail.com)
  *
  */
@@ -40,7 +40,7 @@ public class Tokenizer {
 	static public  ArrayList<String> getTokens(String s) {
 		ArrayList<String>  tokens = new ArrayList<>();
 		s = removePunctuation(s); 
-		System.out.println(s);
+		//System.out.println(s);
 		StringTokenizer tokenizer = new StringTokenizer(s, delimiter+lineDelimiters);
 		while(tokenizer.hasMoreTokens() ) {
 			String currentToken = tokenizer.nextToken();
@@ -56,13 +56,15 @@ public class Tokenizer {
 	 * @return
 	 */
 	static public  String tokenize(String s) {
+	
+        
 		s = removePunctuation(s); 
 		String output ="";
 		StringTokenizer tokenizer = new StringTokenizer(s, delimiter+lineDelimiters);
 		while(tokenizer.hasMoreTokens() ) {
 			String currentToken = tokenizer.nextToken();
 			//System.out.println(currentToken);
-			output= output + "<word>"+currentToken+ "</word>";
+			output= output + "<word>"+currentToken+ "</word> ";
 		}
 		return output;
 	}
@@ -105,7 +107,7 @@ class TokenizerDemo {
 		
 		 String s = "Who are you? Hello world. I am a simple tokenizer. "
 		 		+ "My name is Tokenizer22 and I am 22 minutes old. Have fun!!"
-		 		+ "My friends are: Maria and Nikos.";
+		 		+ "My friends are: Maria and Nikos. Μιλάω και Ελληνικά επίσης!";
 		
 		 System.out.println("\nOriginal Text:\n" + s );
 		 

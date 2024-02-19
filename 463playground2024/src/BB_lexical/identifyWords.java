@@ -1,5 +1,9 @@
 package BB_lexical;
 
+/**
+ * Just shows steps of word identification
+ * (tokenization, lowercase, removal of accents)
+ */
 import java.text.Normalizer;
 import java.text.Normalizer.Form;
 /*
@@ -29,7 +33,7 @@ class identifyWords {
 
  class Test {
 	 public static void main(String[] lala) {
-		 String line = "Hello, my name is John, how are you? ";
+		 String line = "Hello, MY name is John, how are you? ";
 		 String lineGR = "Σήμερα έχει καλό καιρό.";
 		 identifyWords.IdentifyWordsOf(line+lineGR); 
 	 }

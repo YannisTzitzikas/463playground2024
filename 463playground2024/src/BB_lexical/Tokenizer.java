@@ -44,7 +44,7 @@ public class Tokenizer {
 		StringTokenizer tokenizer = new StringTokenizer(s, delimiter+lineDelimiters);
 		while(tokenizer.hasMoreTokens() ) {
 			String currentToken = tokenizer.nextToken();
-			tokens.add(currentToken);
+			tokens.add(currentToken.toLowerCase());
 		}
 		return tokens;
 	}	

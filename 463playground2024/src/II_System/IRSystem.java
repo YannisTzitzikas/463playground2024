@@ -42,14 +42,18 @@ class Document {
 	URI  uri;
 	String contents = "EMPTY";
 	public String toString() {
-		return "Doc"+id +" : " + contents  ;
+		int sizeToBePrinted = 60; // max number of characters to be returned
+		int K = Math.min(sizeToBePrinted, contents.length());
+		String toReturn = contents.substring(0, K) + "...";
+		toReturn = toReturn.replace("\n", " ").replace("\r", " "); // replacing line breaks with spaces
+		return "Doc"+id +" : " + toReturn ;
 	}
 	Document(File file){
 		id =curID++;
 		uri = file.toURI();
 		try {
 			contents = new Scanner(file).useDelimiter("\\Z").next();
-			System.out.println("Doc"+id+ ":" + contents);
+			System.out.println(this);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -137,7 +141,7 @@ public class IRSystem {
 	   
 	   //A finding the docs that have something in common with the query
 	   Set<Document> relatedDocs = new HashSet<>();
-	   for (Document d: docs) {
+	   for (Document d: docs) {  // todo: index to avoid scanning all docs
 		   // A.1 Finding the docs to return
 			   
 		   // Option 1: a document is retrieved in it contains (exactly) the query (i.e. like plan Ctrl-F)
@@ -164,9 +168,12 @@ public class IRSystem {
 		   
 		   //A.2  Scoring each doc that will be returned 
 		   if (! commonwords.isEmpty()) {
-			   scores.put(d, (double) commonwords.size()); //  similarity = number of common words
+			   scores.put(d, (double) commonwords.size()); //  similarity = number of common words (......)
 		   }
 		   
+		   
+		// Option 3:
+		// Vector space similarity between the vector of q and each d  (tf*idf)
 		   
 	   }
 	   
@@ -206,7 +213,7 @@ public class IRSystem {
 			   //System.out.printf("%4.2f | ",score);
 			   for (Document d: a.get(score)) {
 				   System.out.printf(" %4.2f | ",score);  
-				   System.out.println(" "+ d);
+				   System.out.println(" "+ d); // todo: computation of snippets
 			   }
 		   }
 	   } else {
@@ -227,11 +234,13 @@ class IRSystemClient {
 	   System.out.println("==SYSTEM STARTS==");	
 	   
 	   IRSystem irs = new IRSystem();
-	   DocumentCorpus corpus = new DocumentCorpus("Collection1");
+	   //DocumentCorpus corpus = new DocumentCorpus("Collection1");
+	   DocumentCorpus corpus = new DocumentCorpus("Collection2Real/greek");
+	   
 	   irs.setCorpus(corpus);
 	   
 	   // Keyword search
-	   String[] queries = {"test", "Πέμπτη είναι", "Παρασκευή", "test second words σήμερα is"};
+	   String[] queries = {"test", "Πέμπτη είναι", "Παρασκευή", "test second words σήμερα is", "άριστου"};
 	   for (String q: queries) {
 		   System.out.println("Query : " + q);
 		   System.out.println("Answer:");

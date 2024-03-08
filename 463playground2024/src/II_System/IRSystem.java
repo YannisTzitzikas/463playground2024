@@ -240,7 +240,7 @@ class IRSystemClient {
 	   irs.setCorpus(corpus);
 	   
 	   // Keyword search
-	   String[] queries = {"test", "Πέμπτη είναι", "Παρασκευή", "test second words σήμερα is", "άριστου"};
+	   String[] queries = {"Σοφοκλέους", "Πέμπτη είναι", "Παρασκευή", "test second words σήμερα is", "άριστου"};
 	   for (String q: queries) {
 		   System.out.println("Query : " + q);
 		   System.out.println("Answer:");

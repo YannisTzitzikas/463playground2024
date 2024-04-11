@@ -103,6 +103,7 @@ static boolean match(String s1, String s2, int k ) {
 //Driver program
 public static void main(String[] args)
 {
+	/*
  String str1 = "food";
  String str2 = "money";
  System.out.println(EditDistDP(str1, str2));
@@ -113,10 +114,12 @@ public static void main(String[] args)
  System.out.println(match(str1,str2,4));
  System.out.println(match(str1,str2,5));
  
+ */
  
- 
- System.out.println(EditDistDP("αβγό","αυγό"));
- System.out.println(EditDistDP("λα","λαλα"));
+ System.out.println(EditDistDP("αβγο","βαζο"));
+ //System.out.println(EditDistDP("λα","λαλα"));
+ System.out.println(EditDistDP("μηνυμα","μυνημα"));
+ System.out.println(EditDistDP("μυνημα","αμυνα"));
 
 }
 

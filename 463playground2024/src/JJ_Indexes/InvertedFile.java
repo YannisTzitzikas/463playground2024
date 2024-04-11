@@ -23,9 +23,11 @@ import mitos.stemmer.Stemmer;
 
 class VocabularyEntry implements Comparable {
 	String word;
+	// String normalizedWord   // lowercase, not accents
 	String stem 				="noStemyet" ;
-	String phonemicCode 		="nocodeYet" ;
+	String phonemicCode 		="nocodeYet" ; // soundex
 	String phonemicTranscirption="noCodeYet";
+	//Double[] wordvector = new Double[300]; // word2vec, BERT
 	int    df =0; // document frequency
 	Set<Integer> docIds = new TreeSet<>(); // the ids of the docs that contain the word
 	@Override
@@ -99,6 +101,8 @@ public class InvertedFile {
       //Object postingLists;
       void addDocument(int id, String contents) {
     	  for (String s:  BB_lexical.Tokenizer.getTokens(contents)) {
+    		  // s -> toLowerCase, remove Accents
+    		  // if GRSF.contains(s)
     		  vocab.addWord(s, id);
     		  numOfCallsToAddAWord++;
     	  }

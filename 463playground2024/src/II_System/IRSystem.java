@@ -175,6 +175,10 @@ public class IRSystem {
 		// Option 3:
 		// Vector space similarity between the vector of q and each d  (tf*idf)
 		   
+		// Option 4: Relevanance Feedback
+		// Query qRevised = f(query,PositiveFeedback,NegativeFeedback)
+		// answer(qRevised)
+		   
 	   }
 	   
 	   //B. Grouping the found docs wrt their score

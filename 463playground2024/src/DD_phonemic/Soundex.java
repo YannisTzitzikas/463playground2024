@@ -99,7 +99,9 @@ public class Soundex {
         //String name2 = args[1];
         String name1 = "Yannis";
         //String name2 = "Yianis";
-        String name2 = "Yiannnnnis";
+        String name2 = "Yiannnnnides";
+        
+        
         
         String code1 = soundex(name1);
         String code2 = soundex(name2);

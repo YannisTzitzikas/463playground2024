@@ -729,7 +729,10 @@ public class SoundexGRExtra {
     			"Γιάννης",
     			"Γιάνης",
     			"Μοίνοιματα",
-    			"προύχοντας"
+    			"προύχοντας",
+    			"μήνυμα",
+    			"μύνημα",
+    			"μείννοιμμα"
     	};
     	
     	//System.out.printf("%11s -> %s %s \n", "Word" , "SoundexGR" , "Phonetic Transcription");

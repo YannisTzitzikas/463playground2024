@@ -19,5 +19,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="libs/Stemmer.jar"/>
+	<classpathentry kind="lib" path="/CS463playground/lib/BioReader.jar"/>
+	<classpathentry kind="lib" path="libs/BioReader.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

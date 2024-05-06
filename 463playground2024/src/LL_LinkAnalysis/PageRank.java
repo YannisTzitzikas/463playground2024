@@ -20,7 +20,7 @@ import java.util.Scanner;
 
 /**
  * @author kaushilruparelia
- *
+ * @todo: probably is wrong, to delete it, or fix it
  */
 public class PageRank {
 	private static List<ArrayList<Integer>> adjacencyList;

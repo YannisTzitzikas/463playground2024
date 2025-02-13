@@ -15,8 +15,8 @@ import java.io.OutputStream;
 public class ConcatenateFiles {
 	
 	/**
-	 * concatenates files in a stream mode (by loading only n bytes in main memory).
-	 * Useful for merging partial indexes
+	 * concatenates files in a *stream* mode (by loading only n bytes in main memory).
+	 * Useful for merging partial indexes, for avoiding limitations of main memory
 	 * @param files
 	 * @param outFile
 	 */

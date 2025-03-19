@@ -1,0 +1,17 @@
+{
+        "id": 5,
+        "name": "Oscar Chavez",
+        "age": 42,
+        "email": "oscar.chavez@example.com",
+        "address": {
+            "street": "252 White St",
+            "city": "Denver",
+            "state": "MA",
+            "zip": "55201"
+        },
+        "interests": [
+            "cooking",
+            "writing",
+            "yoga"
+        ]
+    }
